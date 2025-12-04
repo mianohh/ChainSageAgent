@@ -18,12 +18,12 @@ const AGENT_INTERVAL = parseInt(process.env.AGENT_LOOP_INTERVAL) || 30000;
 const PORT = parseInt(process.env.PORT) || 3000;
 
 if (!WALLET_ADDRESS) {
-  console.error('❌ Error: WALLET_ADDRESS not set in .env file');
+  console.error('❌ Error: WALLET_ADDRESS not set in environment variables');
   process.exit(1);
 }
 
 if (!process.env.THIRDWEB_CLIENT_ID) {
-  console.error('❌ Error: THIRDWEB_CLIENT_ID not set in .env file');
+  console.error('❌ Error: THIRDWEB_CLIENT_ID not set in environment variables');
   process.exit(1);
 }
 
