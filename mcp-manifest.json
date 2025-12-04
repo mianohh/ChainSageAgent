@@ -1,0 +1,70 @@
+{
+  "name": "chainsage-agent",
+  "version": "1.0.0",
+  "description": "ChainSage Alerts – Autonomous cross-chain AI risk & opportunity agent with wallet insights and agent controls",
+  "author": "ChainSage Team",
+  "category": "blockchain-analytics",
+  "tags": ["blockchain", "ai", "risk-analysis", "multi-chain", "autonomous-agent", "web3"],
+  "endpoints": {
+    "getWalletInsights": {
+      "method": "GET",
+      "path": "/api/alerts/wallet/{wallet}",
+      "description": "Get risk alerts and insights for a specific wallet address",
+      "parameters": {
+        "wallet": {
+          "type": "string",
+          "required": true,
+          "description": "Ethereum wallet address"
+        }
+      }
+    },
+    "startAgent": {
+      "method": "POST",
+      "path": "/api/agent/start",
+      "description": "Start the autonomous monitoring agent"
+    },
+    "stopAgent": {
+      "method": "POST",
+      "path": "/api/agent/stop",
+      "description": "Stop the autonomous monitoring agent"
+    },
+    "getAgentStatus": {
+      "method": "GET",
+      "path": "/api/agent/status",
+      "description": "Get current agent status and metrics"
+    },
+    "getRecentAlerts": {
+      "method": "GET",
+      "path": "/api/alerts",
+      "description": "Get recent alerts across all monitored wallets",
+      "parameters": {
+        "limit": {
+          "type": "number",
+          "required": false,
+          "default": 50,
+          "description": "Number of alerts to retrieve"
+        }
+      }
+    },
+    "getStats": {
+      "method": "GET",
+      "path": "/api/stats",
+      "description": "Get alert statistics (total, high/medium/low risk counts)"
+    }
+  },
+  "capabilities": [
+    "multi-chain-monitoring",
+    "ai-risk-analysis",
+    "autonomous-execution",
+    "real-time-alerts",
+    "wallet-insights"
+  ],
+  "chains": [
+    "ethereum",
+    "polygon",
+    "bsc",
+    "arbitrum",
+    "optimism",
+    "base"
+  ]
+}

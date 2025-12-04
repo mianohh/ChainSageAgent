@@ -1,0 +1,22 @@
+{
+  "name": "chainsage-alerts",
+  "version": "1.0.0",
+  "description": "Autonomous Cross-Chain AI Risk & Opportunity Agent",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node src/test.js",
+    "start:prod": "NODE_ENV=production node src/index.js"
+  },
+  "keywords": ["blockchain", "ai", "agent", "thirdweb", "web3"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "thirdweb": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "better-sqlite3": "^9.2.2"
+  }
+}
