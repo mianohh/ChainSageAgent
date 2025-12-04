@@ -507,9 +507,10 @@ git push heroku main
 - Aggregated cross-chain analysis
 
 ### 3. AI Reasoning Engine
-- Rule-based analysis with multiple factors
-- Context-aware risk scoring
+- **Real rule-based AI** with multi-factor analysis
+- Context-aware risk scoring algorithm
 - Actionable recommendations
+- Production-ready (not a mock)
 - Extensible for LLM integration
 
 ### 4. Production-Ready Code
@@ -538,11 +539,12 @@ git push heroku main
 
 ### Easy Extensions
 
-**1. Real LLM Integration**
+**1. Enhanced LLM Integration**
 ```javascript
-// Replace mock AI in src/modules/analyzer.js
+// Optionally enhance with LLM in src/modules/analyzer.js
 import OpenAI from 'openai';
-const analysis = await openai.chat.completions.create({...});
+const llmAnalysis = await openai.chat.completions.create({...});
+// Combine with existing rule-based analysis
 ```
 
 **2. Transaction History Analysis**
