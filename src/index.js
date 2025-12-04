@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
 mkdirSync(join(__dirname, '../data'), { recursive: true });
 
 // Validate environment variables
-const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
+const WALLET_ADDRESS = process.env.WALLET_ADDRESS?.trim();
 const AGENT_INTERVAL = parseInt(process.env.AGENT_LOOP_INTERVAL) || 30000;
 const PORT = parseInt(process.env.PORT) || 3000;
 
@@ -30,6 +30,8 @@ if (!process.env.THIRDWEB_CLIENT_ID) {
 // Validate wallet address format
 if (!/^0x[a-fA-F0-9]{40}$/.test(WALLET_ADDRESS)) {
   console.error('❌ Error: Invalid wallet address format');
+  console.error(`Received: "${WALLET_ADDRESS}" (length: ${WALLET_ADDRESS.length})`);
+  console.error('Expected: 0x followed by 40 hexadecimal characters');
   process.exit(1);
 }
 
